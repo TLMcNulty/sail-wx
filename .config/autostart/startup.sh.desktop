@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Exec=/home/user/startup.sh
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
+Name[en_US]=startup script
+Name=startup script
+Comment[en_US]=
+Comment=

@@ -1,0 +1,11 @@
+apiVersion: 1
+datasources:
+  - name: weather - InfluxDB
+    type: influxdb
+    access: proxy
+    database: weather
+    user: ${}
+    password: ${}
+    url: http://influxdb:8086
+    isDefault: false
+    editable: true

@@ -1,0 +1,14 @@
+[Unit]
+Description=RTL_433 service script
+StartLimitIntervalSec=5
+
+[Service]
+Type=exec
+EnvironmentFile=/etc/sail-wx/.env
+ExecStart=/usr/bin/rtl_433 -vv -M time:unix:usec:utc -F "influx://127.0.0.1:8086/write?db=weather&p=${INFLUXDB_PASSWORD}&u=${INFLUXDB_USERNAME}"
+
+# Restart script if stopped
+Restart=always
+
+[Install]
+WantedBy=default.target
